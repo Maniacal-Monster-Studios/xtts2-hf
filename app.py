@@ -191,16 +191,6 @@ def predict(
                 None,
                 None,
             )
-        if len(prompt) > 200:
-            gr.Warning(
-                "Text length limited to 200 characters for this demo, please try shorter text. You can clone this space and edit code for your own usage"
-            )
-            return (
-                None,
-                None,
-                None,
-                None,
-            )
         global DEVICE_ASSERT_DETECTED
         if DEVICE_ASSERT_DETECTED:
             global DEVICE_ASSERT_PROMPT
@@ -613,8 +603,8 @@ with gr.Blocks(analytics_enabled=False) as demo:
         with gr.Column():
             input_text_gr = gr.Textbox(
                 label="Text Prompt",
-                info="One or two sentences at a time is better. Up to 200 text characters.",
-                value="Hi there, I'm your new voice clone. Try your best to upload quality audio",
+                info="One or two sentences at a time is better.",
+                value="Hi there, I'm M3gan and I'm your friend till the end.",
             )
             language_gr = gr.Dropdown(
                 label="Language",
@@ -645,7 +635,7 @@ with gr.Blocks(analytics_enabled=False) as demo:
                 label="Reference Audio",
                 info="Click on the ✎ button to upload your own target speaker audio",
                 type="filepath",
-                value="examples/female.wav",
+                value="examples/m3gan.wav",
             )
             mic_gr = gr.Audio(
                 source="microphone",

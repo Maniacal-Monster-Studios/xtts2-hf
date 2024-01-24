@@ -604,7 +604,7 @@ with gr.Blocks(analytics_enabled=False) as demo:
             input_text_gr = gr.Textbox(
                 label="Text Prompt",
                 info="One or two sentences at a time is better.",
-                value="Hi there, I'm M3gan and I'm your friend till the end.",
+                value="Maniacal Monster Studios is elevating Megan to the next level. Are you ready?",
             )
             language_gr = gr.Dropdown(
                 label="Language",
